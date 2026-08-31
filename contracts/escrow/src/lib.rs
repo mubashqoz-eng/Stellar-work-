@@ -18,11 +18,11 @@ const MAX_FEE_TIERS: u32 = 10;
 #[allow(dead_code)]
 const XLM_STROOP: i128 = 10_000_000;
 const UPGRADE_TIMELOCK_SECS: u64 = 86_400;
-/// Default dispute deposit: 5 XLM in stroops.
+
 const DEFAULT_DISPUTE_FEE: i128 = 50_000_000;
 /// Maximum number of milestones allowed per job.
 const MAX_MILESTONES: u32 = 20;
-/// Maximum number of disputes that can be resolved in a single batch call.
+
 const MAX_BATCH_DISPUTES: u32 = 20;
 /// Default burn percentage in basis points (0% = disabled by default).
 const DEFAULT_BURN_BPS: i128 = 0;
@@ -31,9 +31,7 @@ const DEFAULT_ORACLE_FEE: i128 = 20_000_000;
 /// SC-123: largest page an indexer may request in one `get_events` call.
 /// Bounded so a single call cannot exceed the contract's read budget.
 const MAX_EVENT_PAGE_LIMIT: u32 = 100;
-/// SC-121: largest number of attachment hashes committable in one call.
-/// A Merkle build is O(n) reads and writes, so the ceiling keeps the call
-/// inside a single transaction's budget.
+
 const MAX_ATTACHMENT_LEAVES: u32 = 256;
 
 const INSTANCE_LIFETIME_THRESHOLD: u32 = 17_280;
