@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "analyze": "ANALYZE=true npm run build",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
@@ -14,7 +14,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "chromatic": "chromatic --storybook-build-dir storybook-static",
     "test:visual": "playwright test e2e/visual-regression.spec.ts --project=chromium",
     "test:visual:update": "playwright test e2e/visual-regression.spec.ts --project=chromium --update-snapshots"
